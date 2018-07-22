@@ -2,3 +2,319 @@
 @import "mixins";
 @import "normalize";
 @import "layout";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: $dark;
+    background-color: $background-color;
+}
+
+
+h1 {
+    font-size: 30px;
+    font-weight: 500; 
+}
+
+/* section header */
+h2 {
+    font-size: 19px;
+    text-transform: uppercase;
+    color: $header-color;
+    font-weight: 700;
+}
+
+/* component header */
+h3 {
+    color: $header-color;
+    font-weight: 700;
+}
+    
+a {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover{
+        color: $orange-hover;
+    }
+}
+
+.small {
+    font-size: 13px;
+}
+
+ul {
+    list-style-type: none;   
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: none;
+
+    @media (min-width: 992px) {
+        display: block;
+        height: 61px;
+        width: 100%;
+        margin-left: 189px;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        border-bottom: 2px solid $light-grey;
+
+        .top-bar {
+            font-size: 20px;
+            height: 60px;
+            display: flex;  
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: white;
+            margin-right: 189px;
+        
+            li {
+                display: flex;
+                align-items: center;
+                min-width: 58px;
+                border-left: 1px solid $light-grey;
+                margin-right: 0;
+                line-height: 60px;
+                padding-left: 18px;
+                padding-right: 18px;
+        
+                .icon-wallet {
+                    width: 17px;
+                    height: 18px;
+                    margin-right: 16px;
+                }
+            
+                .icon-arrow {
+                    width: 11px;
+                    height: 7px;
+                    margin-left: 20px;
+                }
+        
+                .icon-wrapper{
+                    height: 60px;
+        
+                    .icon-notification {
+                        width: 16px;
+                        height: 17px;
+                        margin-top: 21px;
+                    }
+        
+                    .icon-quit {
+                        width: 19px;
+                        height: 15px;
+                        margin-top: 21px;
+                    }
+                }
+        
+                .icon-profile {
+                    width: 17px;
+                    height: 17px;
+                    margin-right: 14px;
+                }
+        
+                &:hover {
+                    background-color: $background-color;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.sidebar {
+    height: 100%;
+    width: 189px;
+    background-color: $dark;
+    position: fixed;
+    top: 0;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .logo {
+        margin: 18px 0 18px 20px; 
+    }
+        
+    .nav {
+        background-color: $dark;
+        font-size: $sidebar-font-size;
+        color: white;
+        margin-left: 0; 
+        padding-left: 0;
+        
+        li {
+            height: 43px;
+            padding-top: 15px;
+            padding-left: 19px;
+            position: relative;
+            
+            &::before {
+                content:'';
+                position: absolute;
+                border-left: 5px solid $orange;
+                top: 0;  
+                left: 0;
+                transition: transform 0.4s ease-in-out;
+                transform: scaleY(0);
+                display: block;  
+            }
+
+            &:hover{
+                background-color: $sidebar-hover;
+                cursor: pointer;
+
+                &::before {
+                    height: 42px;
+                    transform: scaleY(1);
+                }
+            } 
+
+            .icon {
+                width: 14px;
+                height: 13px;
+                margin-right: 14px;
+            }        
+        }
+    }
+
+    .top-bar-sm {
+        color: white;
+        
+
+        li {
+            width: 100%;
+            height: 43px;
+            padding-top: 15px;
+            padding-left: 19px;
+    
+            .icon-wallet {
+                width: 14px;
+                height: 13px;
+                margin-right: 14px;
+            }
+        
+            .icon-arrow {
+                width: 11px;
+                height: 7px;
+            }
+    
+            .icon-wrapper{
+                height: 60px;
+    
+                .icon-notification {
+                    width: 16px;
+                    height: 17px;
+                    margin-right: 14px;
+                }
+    
+                .icon-quit {
+                    width: 19px;
+                    height: 15px;
+                }
+            }
+    
+            .icon-profile {
+                width: 17px;
+                height: 17px;
+                margin-right: 14px;
+            }
+    
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    
+        @media (min-width: 992px) {
+            display: none;
+        }
+    }
+}
+
+.main-wrapper {
+    margin-left: 189px; 
+    background-color: $background-color;
+
+    section {        
+        background-color: white;
+        padding: 10px;
+        box-shadow: 0 0 10px $dark-grey;
+    }
+
+    @media (min-width: 992px) {
+        margin-top: 61px;
+
+        section {
+            margin: 0px 17px 21px 17px;
+            padding: 21px 185px 24px 185px;
+            box-shadow: 0 0 10px $dark-grey;
+
+            &:first-child {
+                margin-top: 76px;
+            }            
+        }
+    }
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 14px 26px 14px 22px;
+    border: none; 
+    border-radius: 3px;
+    text-align: center;     
+    color: white;   
+}
+
+.btn-orange {
+    background-color: $orange; 
+
+    &:hover {
+        background-color: $orange-hover;
+        cursor: pointer;
+        color: white; 
+    }
+}
+
+.btn-grey {
+    background-color: $darkest-grey;
+
+    &:hover {
+        background-color: $dark-grey;
+        cursor: pointer;
+        color: white; 
+    }
+}
+
+.btn-disabled {
+    background-color: $light-grey;
+}
+
+table { 
+    border-collapse: collapse;
+    max-width: 688px;
+
+    tr {
+        font-weight: 700; 
+        border-top: 2px solid $light-grey; 
+        color: $header-color; 
+        
+        &:hover {
+            background-color: $table-background;
+            cursor: pointer;
+        }
+
+        td {
+            padding: 22px 19px 26px 19px;
+        }
+    }
+}
