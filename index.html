@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>9</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,18 +32,22 @@
                 </li>
             </ul>
         </header>
-        <div class="sidebar">
+        <div class="sidebar js-toggle-sidebar">
             <div class="logo">
                 <img src="images/logo.png">
+                <a href="#" class="hamburger-icon">
+                    <i class="fa fa-bars"></i>
+                </a>
             </div>
-            <ul class="nav">
-                <li><img src="images/icons/general.svg" class="icon">General</li>
-                <li><img src="images/icons/details.svg" class="icon">Details</li>
-                <li><img src="images/icons/links.svg" class="icon">Links</li>
-                <li><img src="images/icons/banners.svg" class="icon">Banners</li>
-                <li><img src="images/icons/personaldata.svg" class="icon">Personal data</li>
-                <li><img src="images/icons/payout.svg" class="icon">Payout</li>
-                <li><img src="images/icons/postback.svg" class="icon">Postback</li>     
+            
+            <ul class="nav" >
+                <li><a href="#" class="sidebar-link"><img src="images/icons/general.svg" class="icon">General</a></li>
+                <li><a href="#" class="sidebar-link"><img src="images/icons/details.svg" class="icon">Details</a></li>
+                <li><a href="#" class="sidebar-link"><img src="images/icons/links.svg" class="icon">Links</a></li>
+                <li><a href="#" class="sidebar-link"><img src="images/icons/banners.svg" class="icon">Banners</a></li>
+                <li><a href="#" class="sidebar-link"><img src="images/icons/personaldata.svg" class="icon">Personal data</a></li>
+                <li><a href="#" class="sidebar-link"><img src="images/icons/payout.svg" class="icon">Payout</a></li>
+                <li><a href="#" class="sidebar-link"><img src="images/icons/postback.svg" class="icon">Postback</a></li>     
             </ul>
             <ul class="top-bar-sm">
                 <li>
@@ -101,4 +106,5 @@
             </section>
         </div>
     </body>
+    <script src="js/script.js"></script>
 </html>
