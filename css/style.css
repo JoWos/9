@@ -661,28 +661,34 @@ header {
 
 @media (min-width: 992px) {
   header {
-    display: block;
-    height: 61px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    height: 60px;
     width: 100%;
-    margin-left: 189px;
     background-color: white;
     position: fixed;
     top: 0;
-    border-bottom: 2px solid #E3E3E3;
+    border-bottom: 1px solid #E3E3E3;
+    z-index: 2;
+  }
+  header .logo-wrapper {
+    background: #333333;
+    height: 60px;
+    width: 189px;
+  }
+  header .logo-wrapper .logo {
+    margin: 18px 0 18px 20px;
+    border: 1px solid red;
   }
   header .top-bar {
     font-size: 20px;
-    height: 60px;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: row;
-        flex-direction: row;
-    -ms-flex-pack: end;
-        justify-content: flex-end;
-    -ms-flex-align: center;
-        align-items: center;
+    /*flex-direction: row;*/
+    /* align-items: center;*/
     background-color: white;
-    margin-right: 189px;
   }
   header .top-bar li {
     display: -ms-flexbox;
@@ -737,14 +743,11 @@ header {
   position: fixed;
   top: 0;
   overflow: auto;
+  padding-top: 60px;
 }
 
 .sidebar::-webkit-scrollbar {
   display: none;
-}
-
-.sidebar .logo {
-  margin: 18px 0 18px 20px;
 }
 
 .sidebar .nav {

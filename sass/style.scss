@@ -57,24 +57,35 @@ header {
     display: none;
 
     @media (min-width: 992px) {
-        display: block;
-        height: 61px;
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
         width: 100%;
-        margin-left: 189px;
         background-color: white;
         position: fixed;
         top: 0;
-        border-bottom: 2px solid $light-grey;
+        border-bottom: 1px solid $light-grey;
+        z-index: 2;
+
+        .logo-wrapper {
+            background: $dark;
+            height: 60px;
+            width: 189px;
+
+            .logo {
+                margin: 18px 0 18px 20px; 
+                border: 1px solid red;
+            
+            }    
+        }
+        
 
         .top-bar {
             font-size: 20px;
-            height: 60px;
             display: flex;  
-            flex-direction: row;
-            justify-content: flex-end;
-            align-items: center;
+            /*flex-direction: row;*/
+           /* align-items: center;*/
             background-color: white;
-            margin-right: 189px;
         
             li {
                 display: flex;
@@ -136,13 +147,10 @@ header {
     position: fixed;
     top: 0;
     overflow: auto;
+    padding-top: 60px;
 
     &::-webkit-scrollbar {
         display: none;
-    }
-
-    .logo {
-        margin: 18px 0 18px 20px; 
     }
         
     .nav {
