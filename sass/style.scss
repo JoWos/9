@@ -53,8 +53,29 @@ ul {
     padding: 0;
 }
 
+
 header {
     background-color: $dark;
+    height: 40px;
+   /* position: fixed;*/    
+    z-index: 2;
+    
+    .logo-wrapper {
+        background: $dark;
+        /*height: 60px;*/
+        width: 189px;
+        border: 1px solid red;
+
+        .logo {
+           /* margin: 18px 0 18px 20px;*/ 
+            border: 1px solid red;
+        
+        }    
+    }
+
+    .top-bar {
+        display: none;
+    }
 
     @media (min-width: 992px) {
         display: flex;
@@ -71,6 +92,7 @@ header {
             background: $dark;
             height: 60px;
             width: 189px;
+            border: 1px solid red;
 
             .logo {
                 margin: 18px 0 18px 20px; 
@@ -140,56 +162,145 @@ header {
                     display: block;
                 }
             }
+
+            .li-wallet-collapsed {
+                background-color: $background-color;
+            }
         }
     }
 }
 
 .sidebar {
+    display: none;
+
+
+    @media (min-width: 992px) {
     height: 100%;
     width: 189px;
+    display: block;
     background-color: $dark;
     position: fixed;
     top: 0;
     overflow: auto;
     padding-top: 60px;
 
-    &::-webkit-scrollbar {
-        display: none;
-    }
+        &::-webkit-scrollbar {
+            display: none;
+        }
         
+        .nav {
+            background-color: $dark;
+            font-size: $sidebar-font-size;
+            color: white;
+            margin-left: 0; 
+            padding-left: 0;
+            
+            li {
+                height: 43px;
+                padding-top: 15px;
+                padding-left: 19px;
+                position: relative;
+                
+                &::before {
+                    content:'';
+                    position: absolute;
+                    border-left: 5px solid $orange;
+                    top: 0;  
+                    left: 0;
+                    transition: transform 0.4s ease-in-out;
+                    transform: scaleY(0);
+                    display: block;  
+                }
+
+                &:hover{
+                    background-color: $sidebar-hover;
+                    cursor: pointer;
+
+                    &::before {
+                        height: 42px;
+                        transform: scaleY(1);
+                    }
+                } 
+
+                a {
+                    color: white;
+                }
+
+                i {
+                    color: white;
+                    margin-right: 14px;
+                }     
+            }
+        }
+    
+        .top-bar-sm {
+            color: white;
+
+            li {
+                width: 100%;
+                height: 43px;
+                padding-top: 15px;
+                padding-left: 19px;
+        
+                .icon-wallet {
+                    width: 14px;
+                    height: 13px;
+                    margin-right: 14px;
+                }
+            
+                .icon-arrow-down-small {
+                    font-size: 12px; 
+                    margin-left: 20px;
+                }
+
+                .icon-notification {
+                        width: 16px;
+                        height: 17px;
+                        margin-right: 14px;
+                }
+        
+                .icon-quit {
+                        width: 19px;
+                        height: 15px;
+                }
+                
+                .icon-profile {
+                    width: 17px;
+                    height: 17px;
+                    margin-right: 14px;
+                }
+        
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        
+        /* @media (min-width: 992px) {
+                display: none;
+            }*/
+        }
+    }
+}
+
+.sidebar-open {
+    background-color: $dark;
+    height: 100%;
+    width: 100%;
+    display: block;
+  
+
     .nav {
         background-color: $dark;
         font-size: $sidebar-font-size;
         color: white;
-        margin-left: 0; 
-        padding-left: 0;
+        text-align: center;
+       /* margin-left: 0; */
+       /* padding-left: 0;*/
         
         li {
             height: 43px;
             padding-top: 15px;
-            padding-left: 19px;
-            position: relative;
-            
-            &::before {
-                content:'';
-                position: absolute;
-                border-left: 5px solid $orange;
-                top: 0;  
-                left: 0;
-                transition: transform 0.4s ease-in-out;
-                transform: scaleY(0);
-                display: block;  
-            }
-
-            &:hover{
-                background-color: $sidebar-hover;
-                cursor: pointer;
-
-                &::before {
-                    height: 42px;
-                    transform: scaleY(1);
-                }
-            } 
+            padding-left: 19px;       
 
             a {
                 color: white;
@@ -204,7 +315,7 @@ header {
 
     .top-bar-sm {
         color: white;
-        
+        text-align: center;
 
         li {
             width: 100%;
@@ -222,22 +333,18 @@ header {
                 font-size: 12px; 
                 margin-left: 20px;
             }
-    
-            .icon-wrapper{
-                height: 60px;
-    
-                .icon-notification {
+
+            .icon-notification {
                     width: 16px;
                     height: 17px;
                     margin-right: 14px;
-                }
-    
-                .icon-quit {
-                    width: 19px;
-                    height: 15px;
-                }
             }
     
+            .icon-quit {
+                    width: 19px;
+                    height: 15px;
+            }
+            
             .icon-profile {
                 width: 17px;
                 height: 17px;
@@ -249,14 +356,12 @@ header {
             }
         }
     
-        @media (min-width: 992px) {
-            display: none;
-        }
     }
+
 }
 
 .main-wrapper {
-    margin-left: 189px; 
+    margin-top: 10px; 
     background-color: $background-color;
 
     section {        
