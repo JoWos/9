@@ -6,3 +6,11 @@ document.addEventListener('DOMcontentLoaded', function() {
 		})
 	})
 })
+
+
+var arrow = document.getElementById('wallet-arrow');
+arrow.addEventListener('click', function (){
+
+var wallet = document.getElementById('wallet-box');
+	wallet.classList.toggle('wallet-collapsed');
+})
