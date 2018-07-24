@@ -656,7 +656,7 @@ ul {
 }
 
 header {
-  display: none;
+  background-color: #333333;
 }
 
 @media (min-width: 992px) {
@@ -702,32 +702,17 @@ header {
     padding-left: 18px;
     padding-right: 18px;
   }
+  header .top-bar li i {
+    font-size: 16px;
+  }
   header .top-bar li .icon-wallet {
-    width: 17px;
-    height: 18px;
     margin-right: 16px;
   }
-  header .top-bar li .icon-arrow {
-    width: 11px;
-    height: 7px;
+  header .top-bar li .icon-arrow-down-small {
+    font-size: 12px;
     margin-left: 20px;
   }
-  header .top-bar li .icon-wrapper {
-    height: 60px;
-  }
-  header .top-bar li .icon-wrapper .icon-notification {
-    width: 16px;
-    height: 17px;
-    margin-top: 21px;
-  }
-  header .top-bar li .icon-wrapper .icon-quit {
-    width: 19px;
-    height: 15px;
-    margin-top: 21px;
-  }
   header .top-bar li .icon-profile {
-    width: 17px;
-    height: 17px;
     margin-right: 14px;
   }
   header .top-bar li:hover {
@@ -786,9 +771,12 @@ header {
   transform: scaleY(1);
 }
 
-.sidebar .nav li .icon {
-  width: 14px;
-  height: 13px;
+.sidebar .nav li a {
+  color: white;
+}
+
+.sidebar .nav li i {
+  color: white;
   margin-right: 14px;
 }
 
@@ -809,9 +797,9 @@ header {
   margin-right: 14px;
 }
 
-.sidebar .top-bar-sm li .icon-arrow {
-  width: 11px;
-  height: 7px;
+.sidebar .top-bar-sm li .icon-arrow-down-small {
+  font-size: 12px;
+  margin-left: 20px;
 }
 
 .sidebar .top-bar-sm li .icon-wrapper {

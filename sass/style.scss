@@ -54,7 +54,7 @@ ul {
 }
 
 header {
-    display: none;
+    background-color: $dark;
 
     @media (min-width: 992px) {
         display: flex;
@@ -97,39 +97,24 @@ header {
                 padding-left: 18px;
                 padding-right: 18px;
         
+                i {
+                    font-size: 16px;
+                    
+                } 
+
                 .icon-wallet {
-                    width: 17px;
-                    height: 18px;
                     margin-right: 16px;
                 }
             
-                .icon-arrow {
-                    width: 11px;
-                    height: 7px;
+                .icon-arrow-down-small {
+                    font-size: 12px; 
                     margin-left: 20px;
                 }
         
-                .icon-wrapper{
-                    height: 60px;
-        
-                    .icon-notification {
-                        width: 16px;
-                        height: 17px;
-                        margin-top: 21px;
-                    }
-        
-                    .icon-quit {
-                        width: 19px;
-                        height: 15px;
-                        margin-top: 21px;
-                    }
-                }
-        
                 .icon-profile {
-                    width: 17px;
-                    height: 17px;
                     margin-right: 14px;
                 }
+
         
                 &:hover {
                     background-color: $background-color;
@@ -187,11 +172,14 @@ header {
                 }
             } 
 
-            .icon {
-                width: 14px;
-                height: 13px;
+            a {
+                color: white;
+            }
+            
+            i {
+                color: white;
                 margin-right: 14px;
-            }        
+            }     
         }
     }
 
@@ -211,9 +199,9 @@ header {
                 margin-right: 14px;
             }
         
-            .icon-arrow {
-                width: 11px;
-                height: 7px;
+            .icon-arrow-down-small {
+                font-size: 12px; 
+                margin-left: 20px;
             }
     
             .icon-wrapper{
