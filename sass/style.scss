@@ -56,19 +56,38 @@ ul {
 
 header {
     background-color: $dark;
-    height: 40px;
-   /* position: fixed;*/    
-    z-index: 2;
-    
+    height: 40px;   
+   /* z-index: 2;*/
+    position: fixed;
+    width: 100%;
+    top: 0;
+
     .logo-wrapper {
         background: $dark;
         /*height: 60px;*/
-        width: 189px;
-        border: 1px solid red;
+     /*   width: 100%;*/
+        
+        /*display: flex;
+        align-items: center;*/
+        
+        
 
         .logo {
            /* margin: 18px 0 18px 20px;*/ 
-            border: 1px solid red;
+           /* padding: 18px 0 18px 20px;*/
+            /*height: 40px;*/
+            display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5px;
+       
+
+            i {
+                /*float: right;*/   
+                /*margin: 18px 0 18px 20px;*/
+                line-height: 40px;
+              /*  margin-right: 10px;*/
+            }
         
         }    
     }
@@ -81,10 +100,10 @@ header {
         display: flex;
         justify-content: space-between;
         height: 60px;
-        width: 100%;
+       /* width: 100%;*/
         background-color: white;
-        position: fixed;
-        top: 0;
+       /* position: fixed;*/
+       /* top: 0;*/
         border-bottom: 1px solid $light-grey;
         z-index: 2;
 
@@ -92,12 +111,15 @@ header {
             background: $dark;
             height: 60px;
             width: 189px;
-            border: 1px solid red;
+            
 
             .logo {
                 margin: 18px 0 18px 20px; 
-                border: 1px solid red;
-            
+                padding: 0;
+
+                i {
+                    padding-right: 17px;
+                }
             }    
         }
         
@@ -275,9 +297,9 @@ header {
                 }
             }
         
-        /* @media (min-width: 992px) {
+            @media (min-width: 992px) {
                 display: none;
-            }*/
+            }
         }
     }
 }
@@ -287,13 +309,19 @@ header {
     height: 100%;
     width: 100%;
     display: block;
+   /* display: flex;
+    flex-direction: column;
+    justify-content: center;*/
   
 
     .nav {
         background-color: $dark;
         font-size: $sidebar-font-size;
         color: white;
-        text-align: center;
+        border: 1px solid green;
+        margin-left: 20%;
+        /*text-align: center; //wyśrodkowuje elementy, ale to centrowanie mi się nie podoba */
+     /*  width: 100%;*/
        /* margin-left: 0; */
        /* padding-left: 0;*/
         
@@ -316,13 +344,17 @@ header {
     .top-bar-sm {
         color: white;
         text-align: center;
+      /*  display: flex;*/
+        /*justify-content: center;
+        /*flex-direction: column;*/
 
         li {
             width: 100%;
             height: 43px;
             padding-top: 15px;
             padding-left: 19px;
-    
+            border: 1px solid yellow;
+            
             .icon-wallet {
                 width: 14px;
                 height: 13px;
@@ -361,21 +393,27 @@ header {
 }
 
 .main-wrapper {
-    margin-top: 10px; 
+    margin-top: 20px; 
     background-color: $background-color;
 
     section {        
         background-color: white;
         padding: 10px;
         box-shadow: 0 0 10px $dark-grey;
+        margin: 0px 17px 21px 17px;
+
+        &:first-child {
+            margin-top: 30px;
+        }  
     }
 
     @media (min-width: 992px) {
         margin-top: 61px;
+        margin-left: 189px;
 
         section {
-            margin: 0px 17px 21px 17px;
-            padding: 21px 185px 24px 185px;
+           margin: 0px 17px 21px 17px;
+           padding: 21px 185px 24px 185px;
             box-shadow: 0 0 10px $dark-grey;
 
             &:first-child {

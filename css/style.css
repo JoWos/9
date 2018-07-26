@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Colors */
 /* Font sizes */
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -658,20 +659,38 @@ ul {
 header {
   background-color: #333333;
   height: 40px;
-  /* position: fixed;*/
-  z-index: 2;
+  /* z-index: 2;*/
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 header .logo-wrapper {
   background: #333333;
   /*height: 60px;*/
-  width: 189px;
-  border: 1px solid red;
+  /*   width: 100%;*/
+  /*display: flex;
+        align-items: center;*/
 }
 
 header .logo-wrapper .logo {
   /* margin: 18px 0 18px 20px;*/
-  border: 1px solid red;
+  /* padding: 18px 0 18px 20px;*/
+  /*height: 40px;*/
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 0 5px;
+}
+
+header .logo-wrapper .logo i {
+  /*float: right;*/
+  /*margin: 18px 0 18px 20px;*/
+  line-height: 40px;
+  /*  margin-right: 10px;*/
 }
 
 header .top-bar {
@@ -685,10 +704,10 @@ header .top-bar {
     -ms-flex-pack: justify;
         justify-content: space-between;
     height: 60px;
-    width: 100%;
+    /* width: 100%;*/
     background-color: white;
-    position: fixed;
-    top: 0;
+    /* position: fixed;*/
+    /* top: 0;*/
     border-bottom: 1px solid #E3E3E3;
     z-index: 2;
   }
@@ -696,11 +715,13 @@ header .top-bar {
     background: #333333;
     height: 60px;
     width: 189px;
-    border: 1px solid red;
   }
   header .logo-wrapper .logo {
     margin: 18px 0 18px 20px;
-    border: 1px solid red;
+    padding: 0;
+  }
+  header .logo-wrapper .logo i {
+    padding-right: 17px;
   }
   header .top-bar {
     font-size: 20px;
@@ -819,9 +840,6 @@ header .top-bar {
   }
   .sidebar .top-bar-sm {
     color: white;
-    /* @media (min-width: 992px) {
-                display: none;
-            }*/
   }
   .sidebar .top-bar-sm li {
     width: 100%;
@@ -857,18 +875,30 @@ header .top-bar {
   }
 }
 
+@media (min-width: 992px) and (min-width: 992px) {
+  .sidebar .top-bar-sm {
+    display: none;
+  }
+}
+
 .sidebar-open {
   background-color: #333333;
   height: 100%;
   width: 100%;
   display: block;
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center;*/
 }
 
 .sidebar-open .nav {
   background-color: #333333;
   font-size: 14px;
   color: white;
-  text-align: center;
+  border: 1px solid green;
+  margin-left: 20%;
+  /*text-align: center; //wyśrodkowuje elementy, ale to centrowanie mi się nie podoba */
+  /*  width: 100%;*/
   /* margin-left: 0; */
   /* padding-left: 0;*/
 }
@@ -891,6 +921,9 @@ header .top-bar {
 .sidebar-open .top-bar-sm {
   color: white;
   text-align: center;
+  /*  display: flex;*/
+  /*justify-content: center;
+        /*flex-direction: column;*/
 }
 
 .sidebar-open .top-bar-sm li {
@@ -898,6 +931,7 @@ header .top-bar {
   height: 43px;
   padding-top: 15px;
   padding-left: 19px;
+  border: 1px solid yellow;
 }
 
 .sidebar-open .top-bar-sm li .icon-wallet {
@@ -933,7 +967,7 @@ header .top-bar {
 }
 
 .main-wrapper {
-  margin-top: 10px;
+  margin-top: 20px;
   background-color: #f5f5f2;
 }
 
@@ -941,11 +975,17 @@ header .top-bar {
   background-color: white;
   padding: 10px;
   box-shadow: 0 0 10px #bababa;
+  margin: 0px 17px 21px 17px;
+}
+
+.main-wrapper section:first-child {
+  margin-top: 30px;
 }
 
 @media (min-width: 992px) {
   .main-wrapper {
     margin-top: 61px;
+    margin-left: 189px;
   }
   .main-wrapper section {
     margin: 0px 17px 21px 17px;
