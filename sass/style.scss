@@ -25,13 +25,13 @@ h2 {
     font-size: 19px;
     text-transform: uppercase;
     color: $header-color;
-    font-weight: 700;
 }
 
 /* component header */
 h3 {
     color: $header-color;
-    font-weight: 700;
+    font-size: $sidebar-font-size;
+    text-transform: uppercase;
 }
     
 a {
@@ -50,45 +50,44 @@ a {
 ul {
     list-style-type: none;   
     margin: 0;
-    padding: 0;
+    padding: 0; 
+
+    li {   
+        padding-left: 20px;
+        color: $darkest-grey;
+      
+        &:hover {
+            background-color: $table-background;
+            cursor: pointer;
+        }
+    } 
 }
 
 
 header {
-    background-color: $dark;
     height: 40px;   
-   /* z-index: 2;*/
-    position: fixed;
     width: 100%;
     top: 0;
+    position: fixed;
+    background-color: $dark;
 
     .logo-wrapper {
         background: $dark;
-        /*height: 60px;*/
-     /*   width: 100%;*/
-        
-        /*display: flex;
-        align-items: center;*/
-        
-        
 
         .logo {
-           /* margin: 18px 0 18px 20px;*/ 
-           /* padding: 18px 0 18px 20px;*/
-            /*height: 40px;*/
             display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 5px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5px;
        
-
             i {
-                /*float: right;*/   
-                /*margin: 18px 0 18px 20px;*/
                 line-height: 40px;
-              /*  margin-right: 10px;*/
+                color: $dark-grey;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
-        
         }    
     }
 
@@ -100,18 +99,13 @@ header {
         display: flex;
         justify-content: space-between;
         height: 60px;
-       /* width: 100%;*/
         background-color: white;
-       /* position: fixed;*/
-       /* top: 0;*/
         border-bottom: 1px solid $light-grey;
         z-index: 2;
 
         .logo-wrapper {
-            background: $dark;
             height: 60px;
             width: 189px;
-            
 
             .logo {
                 margin: 18px 0 18px 20px; 
@@ -127,24 +121,18 @@ header {
         .top-bar {
             font-size: 20px;
             display: flex;  
-            /*flex-direction: row;*/
-           /* align-items: center;*/
             background-color: white;
         
             li {
                 display: flex;
                 align-items: center;
-                min-width: 58px;
+                min-width: 60px;
                 border-left: 1px solid $light-grey;
-                margin-right: 0;
-                line-height: 60px;
-                padding-left: 18px;
-                padding-right: 18px;
+                padding: 0 18px;    
                 position: relative;
         
                 i {
-                    font-size: 16px;
-                    
+                    font-size: 16px;   
                 } 
 
                 .icon-wallet {
@@ -154,39 +142,65 @@ header {
                 .icon-arrow-down-small {
                     font-size: 12px; 
                     margin-left: 20px;
+                    display: block;
                 }
         
-                .icon-profile {
-                    margin-right: 14px;
+                .icon-arrow-up-small {
+                    font-size: 12px; 
+                    margin-left: 20px;
+                    display: block;
                 }
 
-        
-                &:hover {
-                    background-color: $background-color;
-                    cursor: pointer;
-                }
-
-                .wallet {
+                .hide {
                     display: none;
+                   /* font-size: 0;
+                    margin-left: 0; */
+                }
+                
+                .wallet {
+                   display: none;
                 }
 
                 .wallet-collapsed {
                     width: 190px;
-                    height: 188px;
+                    min-height: 188px;
                     line-height: 60px;
                     border-left: 1px solid $light-grey;
                     border-right: 1px solid $light-grey;
-                    font-size: 20px;
+                    font-size: 15px;
                     background-color: $background-color;
                     position: absolute;
                     top: 60px;
                     left: -1px;
                     display: block;
+                    padding: 0 20px;
+                    overflow-wrap: break-word;   
                 }
-            }
 
-            .li-wallet-collapsed {
-                background-color: $background-color;
+                .icon-notification {
+                    position: absolute;
+
+                    &::after {
+                        content: '';
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background-color: $orange;
+                        display: block;
+                        position: absolute;
+                        top: -2px;
+                        left: 8px;  
+                     } 
+                }
+
+                .icon-profile {
+                    margin-right: 14px;
+                }
+
+                &:hover {
+                    background-color: $background-color;
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -194,7 +208,11 @@ header {
 
 .sidebar {
     display: none;
+    overflow: auto;
 
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     @media (min-width: 992px) {
     height: 100%;
@@ -203,26 +221,25 @@ header {
     background-color: $dark;
     position: fixed;
     top: 0;
-    overflow: auto;
     padding-top: 60px;
-
-        &::-webkit-scrollbar {
-            display: none;
-        }
-        
+    transition: all 0.3s ease-in;
+  
         .nav {
-            background-color: $dark;
-            font-size: $sidebar-font-size;
-            color: white;
+            font-size: $sidebar-font-size; 
             margin-left: 0; 
             padding-left: 0;
-            
+            border-bottom: 1px solid #8c8b8b;
+
             li {
                 height: 43px;
                 padding-top: 15px;
-                padding-left: 19px;
+                padding-left: 20px;
                 position: relative;
                 
+                &:last-child {
+                    margin-bottom: 43px;   
+                }
+
                 &::before {
                     content:'';
                     position: absolute;
@@ -234,9 +251,12 @@ header {
                     display: block;  
                 }
 
-                &:hover{
+                &:hover,
+                &:hover a,
+                &:hover i {
                     background-color: $sidebar-hover;
                     cursor: pointer;
+                    color: white; 
 
                     &::before {
                         height: 42px;
@@ -245,11 +265,11 @@ header {
                 } 
 
                 a {
-                    color: white;
+                    color: $darkest-grey;
                 }
 
                 i {
-                    color: white;
+                    color: $darkest-grey;
                     margin-right: 14px;
                 }     
             }
@@ -301,29 +321,45 @@ header {
                 display: none;
             }
         }
+
+        .manager {
+            padding-left: 20px;
+            height: 40px;
+            line-height: 40px;
+            position: relative;
+            
+           &::before {
+                    content: '';
+                    width: 11px;
+                    height: 11px;
+                    border-radius: 50%;
+                    background-color: $dark-green;
+                    display: block;
+                    position: absolute;
+                    top: 55px;
+                    left: 52px;
+                    z-index: 1;
+                } 
+
+            img {
+                border-radius: 50%;   
+            }
+        }
     }
 }
 
 .sidebar-open {
-    background-color: $dark;
+   background-color: $dark;
     height: 100%;
     width: 100%;
     display: block;
-   /* display: flex;
-    flex-direction: column;
-    justify-content: center;*/
-  
+    overflow: auto;
+    position: fixed;
 
     .nav {
-        background-color: $dark;
         font-size: $sidebar-font-size;
         color: white;
-        border: 1px solid green;
-        margin-left: 20%;
-        /*text-align: center; //wyśrodkowuje elementy, ale to centrowanie mi się nie podoba */
-     /*  width: 100%;*/
-       /* margin-left: 0; */
-       /* padding-left: 0;*/
+        text-align: center; 
         
         li {
             height: 43px;
@@ -342,18 +378,13 @@ header {
     }
 
     .top-bar-sm {
-        color: white;
         text-align: center;
-      /*  display: flex;*/
-        /*justify-content: center;
-        /*flex-direction: column;*/
 
         li {
             width: 100%;
             height: 43px;
             padding-top: 15px;
             padding-left: 19px;
-            border: 1px solid yellow;
             
             .icon-wallet {
                 width: 14px;
@@ -361,11 +392,7 @@ header {
                 margin-right: 14px;
             }
         
-            .icon-arrow-down-small {
-                font-size: 12px; 
-                margin-left: 20px;
-            }
-
+           
             .icon-notification {
                     width: 16px;
                     height: 17px;
@@ -377,6 +404,7 @@ header {
                     height: 15px;
             }
             
+            
             .icon-profile {
                 width: 17px;
                 height: 17px;
@@ -387,7 +415,17 @@ header {
                 cursor: pointer;
             }
         }
-    
+    }
+
+    .manager {
+        padding-left: 20px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+
+        img {
+            border-radius: 50%;   
+        }
     }
 
 }
@@ -412,8 +450,8 @@ header {
         margin-left: 189px;
 
         section {
-           margin: 0px 17px 21px 17px;
-           padding: 21px 185px 24px 185px;
+            margin: 0px 17px 21px 17px;
+            padding: 21px 185px 24px 185px;
             box-shadow: 0 0 10px $dark-grey;
 
             &:first-child {
@@ -476,3 +514,6 @@ table {
         }
     }
 }
+
+
+
