@@ -1,0 +1,155 @@
+header {
+    height: 40px;   
+    width: 100%;
+    top: 0;
+    position: fixed;
+    background-color: $dark;
+
+    .logo-wrapper {
+        background: $dark;
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5px;
+       
+            i {
+                line-height: 40px;
+                color: $dark-grey;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }    
+    }
+
+    .top-bar {
+        display: none;
+    }
+
+    @media (min-width: 992px) {
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        background-color: white;
+        border-bottom: 1px solid $light-grey;
+        z-index: 2;
+
+        .logo-wrapper {
+            height: 60px;
+            width: 189px; 
+            transition: 0.3s all ease-in-out;
+            
+            .logo {
+                width: 100%;
+                padding: 18px 0 18px 20px;            
+
+                i {
+                    padding-right: 17px;
+                    transition: 0.3s all ease-in-out;
+                }
+            }    
+        }
+        
+        .logo-wrapper-short {
+            width: 56px;                     
+
+            .logo-short {
+
+                img {
+                    display: none; 
+                }
+            }    
+        }
+
+        .top-bar {
+            font-size: 20px;
+            display: flex;  
+            background-color: white;
+        
+            li {
+                display: flex;
+                align-items: center;
+                min-width: 60px;
+                border-left: 1px solid $light-grey;
+                padding: 0 18px;    
+                position: relative;
+            
+                i {
+                    font-size: 16px;   
+                } 
+
+                .icon-wallet {
+                    margin-right: 16px;
+                }
+            
+                .icon-arrow-down-small {
+                    font-size: 12px; 
+                    margin-left: 20px;
+                    display: block;
+                }
+        
+                .icon-arrow-up-small {
+                    font-size: 12px; 
+                    margin-left: 20px;
+                    display: block;
+                }
+
+                .hide {
+                    display: none;
+                }
+                
+                .wallet {
+                   display: none;
+                }
+
+                .wallet-collapsed {
+                    width: 190px;
+                    min-height: 188px;
+                    line-height: 60px;
+                    border-left: 1px solid $light-grey;
+                    border-right: 1px solid $light-grey;
+                    font-size: 15px;
+                    background-color: $background-color;
+                    position: absolute;
+                    top: 60px;
+                    left: -1px;
+                    display: block;
+                    padding: 0 20px;
+                    overflow-wrap: break-word;   
+                }
+
+                .icon-notification {
+                    position: absolute;
+
+                    &::after {
+                        content: '';
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background-color: $orange;
+                        display: block;
+                        position: absolute;
+                        top: -2px;
+                        left: 8px;  
+                     } 
+                }
+
+                .icon-profile {
+                    margin-right: 14px;
+                }
+
+                &:hover {
+                    background-color: $background-color;
+                    cursor: pointer;
+                }
+            }
+
+            .li-wallet-collapsed {
+                background-color: $background-color;
+            }
+        }
+    }
+}
