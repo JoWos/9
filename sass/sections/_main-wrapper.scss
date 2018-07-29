@@ -1,0 +1,35 @@
+.main-wrapper {
+    margin-top: 20px; 
+    background-color: $background-color;
+
+    section {        
+        background-color: white;
+        padding: 10px;
+        box-shadow: 0 0 10px $dark-grey;
+        margin: 0px 17px 21px 17px;
+
+        &:first-child {
+            margin-top: 30px;
+        }  
+    }
+
+    @media (min-width: 992px) {
+        margin-top: 61px;
+        margin-left: 189px;
+        transition: 0.3s all ease-in-out;
+
+        section {
+            margin: 0px 17px 21px 17px;
+            padding: 21px 185px 24px 185px;
+            box-shadow: 0 0 10px $dark-grey;
+
+            &:first-child {
+                margin-top: 76px;
+            }            
+        }
+    }
+}
+
+.wide {
+    margin-left: 56px;
+}
