@@ -1,21 +1,6 @@
-/*document.addEventListener('DOMcontentLoaded', function() {
-	document.querySelectorAll('.js--toggle-sidebar').forEach(function(el){
-		el.addEventListener('click', function(event) {
-		event.preventDefault();
-		document.querySelector('.siedabar').classList.toggle('open')
-		})
-	})
-})*/
-// SIDEBAR - OPEN/CLOSE - ORIGINAL
-/*document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.js--toggle-sidebar').forEach(function(el) {
-      el.addEventListener('click', function(event) {
-        event.preventDefault();
-        document.querySelector('.sidebar').classList.toggle('sidebar-open');
-      })
-    });
-  });*/
+'use strict'
 
+// SIDEBAR - OPEN/CLOSE 
   document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.js--toggle-sidebar').forEach(function(el) {
       el.addEventListener('click', function(event) {
@@ -37,25 +22,12 @@
 		 document.querySelector('.manager').classList.remove('manager-short');	
 		 document.querySelector('.main-wrapper').classList.remove('wide');
 		}
-       
       })
     });
   });
 
 
-// COLLAPSIBLE WALLET //
-/*var arrow = document.getElementById('wallet-arrow');
-arrow.addEventListener('click', function (){
-
-var wallet = document.getElementById('wallet-box');
-	wallet.classList.toggle('wallet-collapsed');
-
-var liWallet = document.getElementById('li-wallet');
-	liWallet.classList.toggle('li-wallet-collapsed');
-
-})*/
-
-
+//  WALLET - OPEN/CLOSE
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.li-wallet').forEach(function(el) {
       el.addEventListener('click', function(event) {
