@@ -942,7 +942,7 @@ header .top-bar {
     display: block;
     position: absolute;
     top: 55px;
-    left: 52px;
+    left: 40px;
     z-index: 1;
   }
   .sidebar .manager img {
@@ -950,10 +950,6 @@ header .top-bar {
   }
   .sidebar .manager-short {
     padding-left: 5px;
-  }
-  .sidebar .manager-short h3,
-  .sidebar .manager-short a {
-    color: #333333;
   }
 }
 
