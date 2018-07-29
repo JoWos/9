@@ -715,19 +715,14 @@ header .top-bar {
     height: 60px;
     width: 189px;
     transition: 0.3s all ease-in-out;
-    padding: 18px 0 18px 20px;
   }
   header .logo-wrapper .logo {
     width: 100%;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-    -ms-flex-align: center;
-        align-items: center;
+    padding: 18px 0 18px 20px;
   }
   header .logo-wrapper .logo i {
     padding-right: 17px;
+    transition: 0.3s all ease-in-out;
   }
   header .logo-wrapper-short {
     width: 56px;
@@ -931,7 +926,6 @@ header .top-bar {
     height: 40px;
     line-height: 40px;
     position: relative;
-    transition: 0.3s all ease-in-out;
   }
   .sidebar .manager::before {
     content: '';
@@ -941,15 +935,28 @@ header .top-bar {
     background-color: #04ae00;
     display: block;
     position: absolute;
-    top: 55px;
-    left: 40px;
+    top: 52px;
+    left: 50px;
     z-index: 1;
   }
   .sidebar .manager img {
     border-radius: 50%;
   }
   .sidebar .manager-short {
-    padding-left: 5px;
+    padding: 43px 10px;
+  }
+  .sidebar .manager-short::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    top: 42px;
+    left: 30px;
+  }
+  .sidebar .manager-short h3, .sidebar .manager-short a {
+    display: none;
+  }
+  .sidebar .manager-short img {
+    width: 30px;
   }
 }
 
@@ -1034,7 +1041,6 @@ header .top-bar {
 
 .sidebar-short {
   width: 56px;
-  /*height: 100%;*/
   background-color: #333333;
 }
 
@@ -1044,10 +1050,9 @@ header .top-bar {
 
 .sidebar-short .nav-short {
   display: block;
-  font-size: 14px;
-  color: white;
   margin-left: 0;
   padding-left: 0;
+  border-bottom: 1px solid #8c8b8b;
 }
 
 .sidebar-short .nav-short li {
@@ -1055,6 +1060,10 @@ header .top-bar {
   padding-top: 15px;
   padding-left: 19px;
   position: relative;
+}
+
+.sidebar-short .nav-short li:last-child {
+  margin-bottom: 43px;
 }
 
 .sidebar-short .nav-short li::before {
@@ -1076,10 +1085,6 @@ header .top-bar {
 .sidebar-short .nav-short li:hover::before {
   height: 42px;
   transform: scaleY(1);
-}
-
-.sidebar-short .nav-short li a {
-  color: white;
 }
 
 .sidebar-short .nav-short li i {
@@ -1121,7 +1126,6 @@ header .top-bar {
 
 .wide {
   margin-left: 56px;
-  transition: 0.3s all ease-in-out;
 }
 
 /* BUTTONS */
@@ -1176,5 +1180,9 @@ table tr:hover {
 
 table tr td {
   padding: 22px 19px 26px 19px;
+}
+
+.hide {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
