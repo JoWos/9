@@ -38,32 +38,38 @@ header {
         z-index: 2;
 
         .logo-wrapper {
-            height: 60px;
-            width: 189px; 
-            transition: 0.3s all ease-in-out;
+            width: 56px;                     
+            transition: all 0.3s ease-in-out;
             
             .logo {
-                width: 100%;
-                padding: 18px 0 18px 20px;            
-
-                i {
-                    padding-right: 17px;
-                    transition: 0.3s all ease-in-out;
-                }
-            }    
-        }
-        
-        .logo-wrapper-short {
-            width: 56px;                     
-
-            .logo-short {
+                padding: 18px 0 18px 20px;  
 
                 img {
                     display: none; 
                 }
-            }    
-        }
+            } 
+        
+            &.open {
+                height: 60px;
+                width: 189px; 
+                transition: 0.3s all ease-in-out;
 
+                .logo {
+                    width: 100%; 
+
+                    img {
+                        display: inline-block;
+                    }
+                    
+                    i {
+                        padding-right: 17px;
+                        transition: 0.3s all ease-in-out;
+                    }
+                }
+            }
+        }
+        
+        
         .top-bar {
             font-size: 20px;
             display: flex;  
@@ -76,7 +82,12 @@ header {
                 border-left: 1px solid $light-grey;
                 padding: 0 18px;    
                 position: relative;
-            
+                
+                a {
+                    height: 60px;
+                    line-height: 60px; 
+                }
+
                 i {
                     font-size: 16px;   
                 } 

@@ -11,7 +11,7 @@
     </head>
     <body>
         <header>
-            <div class="logo-wrapper">
+            <div class="logo-wrapper open">
                 <div class="logo">
                     <img src="images/logo.png">
                         <i class="fa fa-bars js--toggle-sidebar"></i>
@@ -23,8 +23,7 @@
                     $1,500.00
                     <i class="icon-arrow-down-small"></i>
                     <i class="icon-arrow-up-small hide"></i>
-                    <div class="wallet">
-                        
+                    <div class="wallet">                       
                             <div class="row">
                                 <div class="col-lg-8">CPA</div>
                                 <div class="col-lg-4">$1000</div>
@@ -41,15 +40,16 @@
                                 <div class="col-lg-8">Net deposit</div>
                                 <div class="col-lg-4">$1000</div>
                             </div>
-                        
                     </div>
                 </li>
                 <li>
                     <i class="icon-notification"></i> 
                 </li>
                 <li>
-                    <i class="icon-profile"></i>
-                    <a href="#" class="small">Leonardo DiCaprio</a>
+                    <a href="#" class="small">
+                        <i class="icon-profile"></i>    
+                        Leonardo DiCaprio
+                    </a>
                 </li>
                 <li>
                     <i class="icon-quit"></i>
@@ -57,56 +57,48 @@
             </ul>
         </header>
         <div class="sidebar" id="sidebar"> 
+            <div class="menu">
             <ul class="nav">
-                <li><a href="#"><i class="icon-general"></i>General</a></li>
-                <li><a href="#"><i class="icon-details"></i>Details</a></li>
-                <li><a href="#"><i class="icon-links"></i>Links</a></li>
-                <li><a href="#"><i class="icon-banners"></i>Banners</a></li>
-                <li><a href="#"><i class="icon-personaldata"></i>Personal data</a></li>
-                <li><a href="#"><i class="icon-payout"></i>Payout</a></li>
-                <li><a href="#"><i class="icon-postback"></i>Postback</a></li>     
+              <li><a href="#"><i class="icon-general"></i><span>General</span></a></li>
+              <li><a href="#"><i class="icon-details"></i><span>Details</span></a></li>
+              <li><a href="#"><i class="icon-links"></i><span>Links</span></a></li>
+              <li><a href="#"><i class="icon-banners"></i><span>Banners</span></a></li>
+              <li><a href="#"><i class="icon-personaldata"></i><span>Personal data</span></a></li>
+              <li><a href="#"><i class="icon-payout"></i><span>Payout</span></a></li>
+              <li><a href="#"><i class="icon-postback"></i><span>Postback</span></a></li>     
             </ul>
-            <ul class="nav-short">
-                    <li><a href="#"><i class="icon-general"></i></a></li>
-                    <li><a href="#"><i class="icon-details"></i></a></li>
-                    <li><a href="#"><i class="icon-links"></i></a></li>
-                    <li><a href="#"><i class="icon-banners"></i></a></li>
-                    <li><a href="#"><i class="icon-personaldata"></i></a></li>
-                    <li><a href="#"><i class="icon-payout"></i></a></li>
-                    <li><a href="#"><i class="icon-postback"></i></a></li>     
-                </ul>
             <ul class="top-bar-sm">
                 <li>
                     <i class="icon-wallet"></i>
-                    $1,500.00
-                    
+                    $1,500.00  
                 </li>
                 <li>
-                    <i class="icon-profile"></i>
-                    <a href="#" class="small">Leonardo DiCaprio</a>
+                    <a href="#" class="small">
+                        <i class="icon-profile"></i>    
+                        Leonardo DiCaprio
+                    </a>
                 </li>
                 <li>
-                    <div class="row">
-                        <div class="col-sm-6 col-md-6">
+                    <div class="bottom-panel">
+                        <div class="notification">
                             <i class="icon-notification"></i>
                         </div>
-                        <div class="col-sm-6 col-md-6">
+                        <div class="quit">
                             <i class="icon-quit"></i>
                         </div>
                     </div>
                 </li>
             </ul>
-            <div class="manager">
+            <div class="user-list">
                 <h3>Your manager</h3>
-                <div class="row ">
-                    <div class="col-sm-6 col-lg-4">
-                        <img src="images/avatar.png" alt="manager avatar">
+                <a href="#" class="manager active">
+                    <div class="cover" style="background-image: url(images/avatar.png)"></div>
+                    <div class="details">
+                        Michael E.
                     </div>
-                    <div class="col-sm-6 col-lg-8">
-                        <a href="#">Michael E.</a>
-                    </div>
-                </div>
-            </div>    
+                </a>
+            </div>  
+            </div> 
         </div>
         <div class="main-wrapper">
             <section>
