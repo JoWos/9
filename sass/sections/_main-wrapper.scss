@@ -11,6 +11,12 @@
         &:first-child {
             margin-top: 60px;
         }  
+
+        .flexbox {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+        }
     }
 
     @media (min-width: 992px) {
@@ -20,7 +26,6 @@
 
         section {
             margin: 0px 17px 21px 17px;
-            padding: 21px 185px 24px 185px;
             box-shadow: 0 0 10px $dark-grey;
 
             &:first-child {

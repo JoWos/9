@@ -25,7 +25,7 @@ h1 {
 
 /* section header */
 h2 {
-    font-size: 19px;
+    font-size: 16px;
     text-transform: uppercase;
     color: $header-color;
 }
@@ -35,6 +35,11 @@ h3 {
     color: $header-color;
     font-size: $sidebar-font-size;
     text-transform: uppercase;
+}
+
+h4 {
+    color: $header-color;
+    font-size: $sidebar-font-size;
 }
     
 a {
@@ -66,6 +71,11 @@ ul {
     } 
 }
 
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* BUTTONS */
 .btn {
@@ -103,25 +113,203 @@ ul {
 
 table { 
     border-collapse: collapse;
-    max-width: 688px;
+    min-width: 688px;
 
     tr {
-        font-weight: 700; 
+        font-weight: bold;
         border-top: 2px solid $light-grey; 
         color: $header-color; 
+
+        td {
+            padding: 22px 19px 26px 19px;
+        
+            a {
+                font-weight: 100;
+            }
+
+            i {
+                visibility: hidden;
+            }    
+        }
         
         &:hover {
             background-color: $table-background;
             cursor: pointer;
+
+            i {
+                visibility: visible;
+            }
         }
 
-        td {
-            padding: 22px 19px 26px 19px;
-        }
     }
 }
 
 
 .hide {
     display: none;
+}
+
+
+.list-with-digit {
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        line-height: 42px;
+        border-bottom: 1px solid $light-grey;
+        font-size: 15px;
+        padding: 0;
+
+        .right {
+            color:$dark;
+        }
+    }
+
+    &.columns {
+        column-count: 2;
+    }
+}
+
+
+.pagination {
+    a {
+        padding: 9px 18px;
+
+        &.active {
+        background-color: $light-grey;
+        }    
+    }              
+}
+
+textarea {
+    width: 156px;
+    height: 123px;
+    border-radius: 3px;
+    border: 1px solid $light-grey;
+    padding: 10px;
+    transition: border 0.2s ease-in-out;
+    font-size: 14px;
+    font-weight: 300;
+    
+
+    &:hover {
+        border: 1px solid $dark-grey;
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline-color: $darkest-grey;  
+    }
+
+    &::placeholder {
+        color: $light-grey;
+        font-size: 12px;
+    }
+
+}
+
+input {
+    width: 156px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid $light-grey;
+    padding: 0 10px;
+    transition: border 0.2s ease-in-out;
+    font-size: 14px;
+    display: inline-block;
+
+    &:hover {
+        border: 1px solid $dark-grey;
+        cursor: pointer;
+
+        &::placeholder {
+            color: $dark-grey;
+        }
+    }
+
+    &:focus {
+        outline: none;  
+    }
+
+    &::placeholder {
+        color: $light-grey;
+        font-size: 12px;
+    }
+
+}
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+    border: 1px solid $light-grey;
+    background-color: white;
+    border-radius: 3px;
+    font-size: 14px;
+    width: 156px;
+    transition: all 0.2s ease-in-out;
+
+    input {
+        border: none;
+        width: 128px; 
+        align-self: stretch;
+        flex: 1 1 auto;
+    }
+    
+    i {
+        color: $light-grey;  
+        padding: 0 5px;
+    }
+
+    &:hover {
+        border: 1px solid $dark-grey;
+        cursor: pointer;
+
+        i {
+            color: $dark-grey;
+            
+        }
+    }
+}
+
+
+.date-picker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 340px;
+    outline: none;
+    border: 1px solid $light-grey;
+    border-radius: 3px;
+    transition: all 0.2s ease-in-out;
+    margin: 0 auto;
+
+    input {
+        align-self: stretch;
+        flex: 1 1 auto;
+        background: transparent;
+        border: none;
+        border-left: 1px solid $light-grey;
+        font-size: 14px;
+
+        &::placeholder {
+            color: black;
+        }
+    }
+
+    i {
+        color: black; 
+        padding: 0 5px;
+    }
+
+    &:hover {
+        border: 1px solid $dark-grey;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+}
+
+.flexbox {
+    display: flex;
+   justify-content: center;
 }

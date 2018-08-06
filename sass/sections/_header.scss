@@ -118,17 +118,13 @@ header {
 
                 .wallet-collapsed {
                     width: 190px;
-                    min-height: 188px;
-                    line-height: 60px;
                     border-left: 1px solid $light-grey;
-                    border-right: 1px solid $light-grey;
-                    font-size: 15px;
+                    border-right: 1px solid $light-grey;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
                     background-color: $background-color;
                     position: absolute;
                     top: 60px;
                     left: -1px;
                     display: block;
-                    padding: 0 20px;
                     overflow-wrap: break-word;   
                 }
 
