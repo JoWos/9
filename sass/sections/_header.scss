@@ -8,12 +8,13 @@ header {
     .logo-wrapper {
         background: $dark;
 
+
         .logo {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 0 5px;
-       
+
             i {
                 line-height: 40px;
                 color: $dark-grey;
@@ -22,6 +23,7 @@ header {
                     cursor: pointer;
                 }
             }
+            
         }    
     }
 
@@ -42,7 +44,7 @@ header {
             transition: all 0.3s ease-in-out;
             
             .logo {
-                padding: 18px 0 18px 20px;  
+                padding: 18px 0 18px 20px;
 
                 img {
                     display: none; 
@@ -53,12 +55,14 @@ header {
                 height: 60px;
                 width: 189px; 
                 transition: 0.3s all ease-in-out;
-
+                border: 1px solid blue;
+                
                 .logo {
                     width: 100%; 
 
                     img {
                         display: inline-block;
+                       /* margin-left: 20px;*/
                     }
                     
                     i {

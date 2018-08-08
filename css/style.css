@@ -665,12 +665,14 @@ header .top-bar {
     height: 60px;
     width: 189px;
     transition: 0.3s all ease-in-out;
+    border: 1px solid blue;
   }
   header .logo-wrapper.open .logo {
     width: 100%;
   }
   header .logo-wrapper.open .logo img {
     display: inline-block;
+    /* margin-left: 20px;*/
   }
   header .logo-wrapper.open .logo i {
     padding-right: 17px;
@@ -1143,18 +1145,21 @@ ul li:hover {
 
 img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+    margin-right: auto;*/
 }
 
 /* BUTTONS */
 .btn {
   display: inline-block;
-  padding: 14px 26px 14px 22px;
+  padding: 0 22px;
   border: none;
+  outline: none;
   border-radius: 3px;
   text-align: center;
   color: white;
+  height: 40px;
+  line-height: 40px;
 }
 
 .btn-orange {
@@ -1179,6 +1184,16 @@ img {
 
 .btn-disabled {
   background-color: #E3E3E3;
+  position: relative;
+  /* padding: 14px 22px 14px 45px;*/
+}
+
+.btn-disabled i {
+  padding-right: 20px;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-50%, -50%);
 }
 
 table {
@@ -1204,6 +1219,10 @@ table tr td i {
   visibility: hidden;
 }
 
+table tr td:first-child {
+  width: 40%;
+}
+
 table tr:hover {
   background-color: rgba(177, 191, 191, 0.18);
   cursor: pointer;
@@ -1211,6 +1230,10 @@ table tr:hover {
 
 table tr:hover i {
   visibility: visible;
+}
+
+table tr:last-child {
+  border-bottom: 2px solid #E3E3E3;
 }
 
 .hide {
@@ -1226,6 +1249,7 @@ table tr:hover i {
   border-bottom: 1px solid #E3E3E3;
   font-size: 15px;
   padding: 0;
+  padding: 0 5px;
 }
 
 .list-with-digit li .right {
@@ -1308,7 +1332,8 @@ input:hover::placeholder {
 }
 
 input:focus {
-  outline: none;
+  /* outline: none; */
+  outline-color: #979797;
 }
 
 input::-webkit-input-placeholder {
@@ -1352,6 +1377,10 @@ input::placeholder {
       flex: 1 1 auto;
 }
 
+.input-container input:focus {
+  outline: none;
+}
+
 .input-container i {
   color: #E3E3E3;
   padding: 0 5px;
@@ -1364,6 +1393,27 @@ input::placeholder {
 
 .input-container:hover i {
   color: #bababa;
+}
+
+.input-container:focus-within {
+  border: 1px solid #979797;
+}
+
+.input-container:focus-within i {
+  color: #979797;
+}
+
+.form-inline {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.form-inline button {
+  margin: 0 20px;
 }
 
 .date-picker {
@@ -1389,7 +1439,6 @@ input::placeholder {
       flex: 1 1 auto;
   background: transparent;
   border: none;
-  border-left: 1px solid #E3E3E3;
   font-size: 14px;
 }
 
@@ -1405,6 +1454,14 @@ input::placeholder {
   color: black;
 }
 
+.date-picker input:nth-child(2) {
+  border-left: 1px solid #E3E3E3;
+}
+
+.date-picker input:focus {
+  outline: none;
+}
+
 .date-picker i {
   color: black;
   padding: 0 5px;
@@ -1416,10 +1473,7 @@ input::placeholder {
   border-radius: 3px;
 }
 
-.flexbox {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
+.date-picker:focus-within {
+  border: 1px solid #979797;
 }
 /*# sourceMappingURL=style.css.map */

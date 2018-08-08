@@ -73,18 +73,21 @@ ul {
 
 img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+   /* margin-left: auto;
+    margin-right: auto;*/
 }
 
 /* BUTTONS */
 .btn {
     display: inline-block;
-    padding: 14px 26px 14px 22px;
+    padding: 0 22px;
     border: none; 
+    outline: none;
     border-radius: 3px;
     text-align: center;     
-    color: white;   
+    color: white;  
+    height: 40px;
+    line-height: 40px;
 }
 
 .btn-orange {
@@ -95,6 +98,7 @@ img {
         cursor: pointer;
         color: white; 
     }
+    
 }
 
 .btn-grey {
@@ -106,10 +110,22 @@ img {
         color: white; 
     }
 }
-
+/////////////////////////////TO DO
 .btn-disabled {
     background-color: $light-grey;
+    position: relative;
+   /* padding: 14px 22px 14px 45px;*/
+
+    i {
+ 
+   padding-right: 20px;
+       position: absolute;
+        top: 50%;
+        left: 15%;
+        transform: translate(-50%, -50%);
+    }
 }
+////////////////////////////////////////////@at-root
 
 table { 
     border-collapse: collapse;
@@ -129,7 +145,11 @@ table {
 
             i {
                 visibility: hidden;
-            }    
+            }
+            
+            &:first-child {
+                width: 40%;
+            }
         }
         
         &:hover {
@@ -141,8 +161,12 @@ table {
             }
         }
 
+        &:last-child {
+            border-bottom: 2px solid $light-grey;
+        }
     }
 }
+
 
 
 .hide {
@@ -159,6 +183,7 @@ table {
         border-bottom: 1px solid $light-grey;
         font-size: 15px;
         padding: 0;
+        padding: 0 5px;
 
         .right {
             color:$dark;
@@ -221,6 +246,7 @@ input {
     &:hover {
         border: 1px solid $dark-grey;
         cursor: pointer;
+        
 
         &::placeholder {
             color: $dark-grey;
@@ -228,7 +254,8 @@ input {
     }
 
     &:focus {
-        outline: none;  
+       /* outline: none; */
+        outline-color: $darkest-grey;  
     }
 
     &::placeholder {
@@ -254,6 +281,10 @@ input {
         width: 128px; 
         align-self: stretch;
         flex: 1 1 auto;
+
+        &:focus {
+            outline: none;   
+        }
     }
     
     i {
@@ -269,6 +300,25 @@ input {
             color: $dark-grey;
             
         }
+    }
+
+    &:focus-within {
+        border: 1px solid $darkest-grey; 
+    }
+
+    &:focus-within i {
+        color: $darkest-grey;
+    }
+
+    
+}
+.form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    button {
+        margin: 0 20px;
     }
 }
 
@@ -289,11 +339,18 @@ input {
         flex: 1 1 auto;
         background: transparent;
         border: none;
-        border-left: 1px solid $light-grey;
         font-size: 14px;
 
         &::placeholder {
             color: black;
+        }
+
+        &:nth-child(2) {
+            border-left: 1px solid $light-grey;
+        }
+
+        &:focus {
+            outline: none;   
         }
     }
 
@@ -302,14 +359,15 @@ input {
         padding: 0 5px;
     }
 
+    
+
     &:hover {
         border: 1px solid $dark-grey;
         cursor: pointer;
         border-radius: 3px;
     }
-}
 
-.flexbox {
-    display: flex;
-   justify-content: center;
+    &:focus-within {
+        border: 1px solid $darkest-grey; 
+    }
 }
