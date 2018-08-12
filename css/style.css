@@ -665,14 +665,12 @@ header .top-bar {
     height: 60px;
     width: 189px;
     transition: 0.3s all ease-in-out;
-    border: 1px solid blue;
   }
   header .logo-wrapper.open .logo {
     width: 100%;
   }
   header .logo-wrapper.open .logo img {
     display: inline-block;
-    /* margin-left: 20px;*/
   }
   header .logo-wrapper.open .logo i {
     padding-right: 17px;
@@ -695,8 +693,9 @@ header .top-bar {
     position: relative;
   }
   header .top-bar li a {
-    height: 60px;
-    line-height: 60px;
+    /* height: 60px;
+                    line-height: 60px; */
+    display: block;
   }
   header .top-bar li i {
     font-size: 16px;
@@ -1079,6 +1078,84 @@ header .top-bar {
   margin-left: 56px;
 }
 
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.overlay.show {
+  display: block;
+}
+
+.modal {
+  display: none;
+  background: #fff;
+  max-width: 900px;
+  min-width: 360px;
+  margin: auto;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.modal.show {
+  display: block;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.modal.login {
+  width: 722px;
+}
+
+.modal.login .input-container {
+  width: 213px;
+  margin: 0 20px;
+}
+
+.modal.login .input-container input {
+  width: 211px;
+}
+
+.modal .close-x {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
+  color: #000;
+  text-decoration: none;
+}
+
+.modal header {
+  font-size: 20px;
+  line-height: 30px;
+  min-height: 30px;
+  font-weight: bold;
+  padding: 0 30px;
+  position: relative;
+}
+
+.modal .content {
+  min-height: 30px;
+  padding: 5px 30px;
+}
+
+.modal .content-buttons {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -1151,15 +1228,26 @@ img {
 
 /* BUTTONS */
 .btn {
-  display: inline-block;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  max-width: 300px;
+  height: 40px;
+  overflow: hidden;
+  margin: 10px;
   padding: 0 22px;
   border: none;
-  outline: none;
   border-radius: 3px;
+  outline: none;
   text-align: center;
   color: white;
-  height: 40px;
-  line-height: 40px;
+}
+
+.btn a {
+  color: white;
 }
 
 .btn-orange {
@@ -1403,16 +1491,18 @@ input::placeholder {
   color: #979797;
 }
 
-.form-inline {
+form {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: row wrap;
       flex-flow: row wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
   -ms-flex-align: center;
       align-items: center;
 }
 
-.form-inline button {
+form button {
   margin: 0 20px;
 }
 

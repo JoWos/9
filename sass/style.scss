@@ -5,6 +5,8 @@
 @import "sections/header";
 @import "sections/sidebar";
 @import "sections/main-wrapper";
+@import "components/modals";
+
 
 * {
     box-sizing: border-box;
@@ -78,16 +80,30 @@ img {
 }
 
 /* BUTTONS */
+
+
 .btn {
-    display: inline-block;
-    padding: 0 22px;
-    border: none; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    height: 40px;
+    overflow: hidden;
+    margin: 10px;
+    padding: 0 22px; 
+    border: none;
+    border-radius: 3px; 
     outline: none;
-    border-radius: 3px;
     text-align: center;     
     color: white;  
-    height: 40px;
-    line-height: 40px;
+    
+
+    
+    
+
+    a {
+        color: white;
+    }
 }
 
 .btn-orange {
@@ -312,9 +328,11 @@ input {
 
     
 }
-.form-inline {
+
+form {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     align-items: center;
 
     button {
@@ -371,3 +389,5 @@ input {
         border: 1px solid $darkest-grey; 
     }
 }
+
+

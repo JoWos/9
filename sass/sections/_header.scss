@@ -55,14 +55,12 @@ header {
                 height: 60px;
                 width: 189px; 
                 transition: 0.3s all ease-in-out;
-                border: 1px solid blue;
                 
                 .logo {
                     width: 100%; 
 
                     img {
                         display: inline-block;
-                       /* margin-left: 20px;*/
                     }
                     
                     i {
@@ -88,8 +86,9 @@ header {
                 position: relative;
                 
                 a {
-                    height: 60px;
-                    line-height: 60px; 
+                   /* height: 60px;
+                    line-height: 60px; */
+                    display: block;
                 }
 
                 i {

@@ -46,13 +46,15 @@
                     <i class="icon-notification"></i> 
                 </li>
                 <li>
-                    <a href="#" class="small">
+                    <a href="#modal-login" class="show-modal small">
                         <i class="icon-profile"></i>    
                         Leonardo DiCaprio
                     </a>
                 </li>
                 <li>
-                    <i class="icon-quit"></i>
+                    <a href="#modal-quit" class="show-modal">
+                        <i class="icon-quit"></i>
+                    </a>    
                 </li>
             </ul>
         </header>
@@ -105,13 +107,13 @@
                 <h2>General Statistic</h2>
                 <hr>
                 <div class="container flexbox"> 
-                    <form class="form-inline">
-                    <div class="date-picker">
-                        <input type="text" placeholder="16.05.2018">    
-                        <input type="text" placeholder="16.05.2018">
-                        <a href="#"><i class="icon-calendar"></i></a>
-                    </div>
-                    <button class="btn btn-orange"><i class="icon-refresh"></i></button>
+                    <form>
+                        <div class="date-picker">
+                            <input type="text" placeholder="16.05.2018">    
+                            <input type="text" placeholder="16.05.2018">
+                            <a href="#"><i class="icon-calendar"></i></a>
+                        </div>
+                            <a href="#" class="btn btn-orange"><i class="icon-refresh"></i></a>
                     </form>
                 </div>
                 <hr>
@@ -145,7 +147,7 @@
                 <hr>  
                 <div class="container">
                     <div class="flexbox">
-                        <a class="btn btn-orange">+ add new</a>
+                        <a href="#" class="btn btn-orange">+ add new</a>
                     </div>
                     <div class="flexbox">
                         <table>
@@ -214,10 +216,37 @@
                         </table>
                     </div>
                     <div class="flexbox">
-                        <a class="btn btn-orange">+ add new</a>
+                        <a href="#" class="btn btn-orange" >+ add new</a>
                     </div>
-                </div>                   
+                </div> 
             </section>
+        </div>
+    
+        <!--Modals-->
+        <div class="overlay" id="modal-overlay">
+            <div class="modal" id="modal-quit">
+                <h4>Do you really want to Quit?</h4>
+                <hr>
+                <div class="content-buttons">
+                    <button class="btn btn-grey close">Cancel</button>
+                    <button class="btn btn-orange close">Quit</button>
+                </div>
+            </div>
+            <div class="modal login" id="modal-login">
+                <h3>Login</h3>
+                <hr>
+                <form>
+                    <div class="input-container">
+                        <i class="icon-login"></i>
+                        <input type="text" placeholder="login name">
+                    </div>
+                    <div class="input-container">
+                        <i class="icon-password"></i>
+                        <input type="password" placeholder="password">
+                    </div>
+                    <button class="btn btn-orange close">Enter</button>
+                </form>
+            </div>
         </div>
     </body>
     <script src="js/script.js"></script>

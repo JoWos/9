@@ -43,7 +43,8 @@
             <div class="btn btn-grey">grey button</div>
             <div class="btn btn-disabled"><i class="icon-links"></i>disabled button-don't like it</div>
             <button class="btn btn-orange">button as a button</button>
-            <a class="btn btn-grey">link as a button</a>
+            <a class="btn btn-grey">link as a button</a><br>
+            <div class="btn btn-orange"><a href="#modal-one" class="show-modal"><i class="icon-refresh"></i></a></div>
         </div>
         <hr>
         <div>
@@ -145,7 +146,57 @@
                    </li>
                 </ul>
             </div>
+            <div>
+                MODALS<br>
+                <p><a href="#modal-quit" class="show-modal">Show Quit modal</a></p>
+                <p><a href="#modal-login" class="show-modal">Show Login modal</a></p>
+	            <p><a href="#modal-three" class="show-modal">Show modal three</a></p>
+		        <p><a href="#modal-four" class="show-modal">Show modal 4</a></p>
+            </div>
+
+            <!--Modals-->
             
+            <div class="overlay" id="modal-overlay">
+                <div class="modal" id="modal-quit">
+                    <h4>Do you really want to Quit?</h4>
+                    <hr>
+                    <div class="content-buttons">
+                        <button class="btn btn-grey close">Cancel</button>
+                        <button class="btn btn-orange close">Quit</button>
+                    </div>
+                </div>
+                <div class="modal login" id="modal-login">
+                    <h3>Login</h3>
+                    <hr>
+                    <form>
+                        <div class="input-container">
+                            <i class="icon-login"></i>
+                            <input type="text" placeholder="login name">
+                        </div>
+                        <div class="input-container">
+                            <i class="icon-password"></i>
+                            <input type="password" placeholder="password">
+                        </div>
+                        <button class="btn btn-orange close">Enter</button>
+                    </form>
+                </div>
+                <div class="modal" id="modal-three">
+                    <a href="#" class="close close-x">x</a>
+                    <header>Modal three</header>
+                    <div class="content">
+                        <p>Trzy</p>
+                    </div>
+                </div>
+                
+                    <div class="modal" id="modal-four">
+                    <a href="#" class="close close-x">x</a>
+                    
+                    <div class="content">
+                        <p>4!</p>
+                    </div>
+                </div>
+            </div>
+
         </section>
         <footer></footer>
         
