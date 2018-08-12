@@ -13,10 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-
-
-
 //  WALLET - OPEN/CLOSE
 document.addEventListener('DOMContentLoaded', function() {
 	document.querySelectorAll('.li-wallet').forEach(function(el) {
@@ -32,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-////////MODALS
+//MODALS
 
 var showModal = function(event){
 	event.preventDefault();		

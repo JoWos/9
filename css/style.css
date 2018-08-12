@@ -693,8 +693,6 @@ header .top-bar {
     position: relative;
   }
   header .top-bar li a {
-    /* height: 60px;
-                    line-height: 60px; */
     display: block;
   }
   header .top-bar li i {
@@ -1222,8 +1220,6 @@ ul li:hover {
 
 img {
   display: block;
-  /* margin-left: auto;
-    margin-right: auto;*/
 }
 
 /* BUTTONS */
@@ -1268,20 +1264,6 @@ img {
   background-color: #bababa;
   cursor: pointer;
   color: white;
-}
-
-.btn-disabled {
-  background-color: #E3E3E3;
-  position: relative;
-  /* padding: 14px 22px 14px 45px;*/
-}
-
-.btn-disabled i {
-  padding-right: 20px;
-  position: absolute;
-  top: 50%;
-  left: 15%;
-  transform: translate(-50%, -50%);
 }
 
 table {
@@ -1420,7 +1402,6 @@ input:hover::placeholder {
 }
 
 input:focus {
-  /* outline: none; */
   outline-color: #979797;
 }
 
