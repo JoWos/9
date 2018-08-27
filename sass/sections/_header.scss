@@ -8,12 +8,11 @@ header {
     .logo-wrapper {
         background: $dark;
 
-
         .logo {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 5px;
+            padding: 0 25px;
 
             i {
                 line-height: 40px;
@@ -23,7 +22,6 @@ header {
                     cursor: pointer;
                 }
             }
-            
         }    
     }
 

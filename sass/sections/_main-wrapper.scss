@@ -1,17 +1,23 @@
 .main-wrapper {
     margin-top: 20px; 
     background-color: $background-color;
-
+    
     section {        
         background-color: white;
-        padding: 10px;
         box-shadow: 0 0 10px $dark-grey;
-        margin: 0px 17px 21px 17px;
-
+        
         &:first-child {
             margin-top: 60px;
         }  
 
+        .content-header {
+            border-bottom: 1px solid $light-grey;
+            padding: 10px;
+        }
+
+        .content {
+            border-bottom: 1px solid $light-grey;
+        }
         .flexbox {
             display: flex;
             justify-content: center;

@@ -336,7 +336,7 @@ template {
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
-  padding: 25px 15px;
+  padding: 25px 10px;
 }
 
 .container-fluid {
@@ -624,7 +624,7 @@ header .logo-wrapper .logo {
       align-items: center;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  padding: 0 5px;
+  padding: 0 25px;
 }
 
 header .logo-wrapper .logo i {
@@ -1040,13 +1040,20 @@ header .top-bar {
 
 .main-wrapper section {
   background-color: white;
-  padding: 10px;
   box-shadow: 0 0 10px #bababa;
-  margin: 0px 17px 21px 17px;
 }
 
 .main-wrapper section:first-child {
   margin-top: 60px;
+}
+
+.main-wrapper section .content-header {
+  border-bottom: 1px solid #E3E3E3;
+  padding: 10px;
+}
+
+.main-wrapper section .content {
+  border-bottom: 1px solid #E3E3E3;
 }
 
 .main-wrapper section .flexbox {
@@ -1084,6 +1091,7 @@ header .top-bar {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
 }
 
 .overlay.show {
@@ -1096,7 +1104,6 @@ header .top-bar {
   max-width: 900px;
   min-width: 360px;
   margin: auto;
-  padding: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1112,16 +1119,24 @@ header .top-bar {
 }
 
 .modal.login {
-  width: 722px;
+  width: 95%;
 }
 
 .modal.login .input-container {
-  width: 213px;
   margin: 0 20px;
+  width: 90%;
 }
 
-.modal.login .input-container input {
-  width: 211px;
+@media (min-width: 768px) {
+  .modal.login {
+    max-width: 772px;
+  }
+  .modal.login .input-container {
+    width: 213px;
+  }
+  .modal.login .input-container input {
+    width: 211px;
+  }
 }
 
 .modal .close-x {
@@ -1133,21 +1148,21 @@ header .top-bar {
   text-decoration: none;
 }
 
-.modal header {
+.modal .modal-header {
   font-size: 20px;
   line-height: 30px;
   min-height: 30px;
   font-weight: bold;
-  padding: 0 30px;
+  padding: 0 10px;
   position: relative;
+  border-bottom: 1px solid #E3E3E3;
 }
 
 .modal .content {
-  min-height: 30px;
-  padding: 5px 30px;
+  padding: 10px;
 }
 
-.modal .content-buttons {
+.modal .content .content-buttons {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: end;
@@ -1246,6 +1261,14 @@ img {
   color: white;
 }
 
+.btn:disabled {
+  background-color: #E3E3E3;
+}
+
+.btn:disabled:hover {
+  background-color: #E3E3E3;
+}
+
 .btn-orange {
   background-color: #f58220;
 }
@@ -1268,7 +1291,8 @@ img {
 
 table {
   border-collapse: collapse;
-  min-width: 688px;
+  max-width: 686px;
+  width: 100%;
 }
 
 table tr {
@@ -1347,6 +1371,7 @@ textarea {
   transition: border 0.2s ease-in-out;
   font-size: 14px;
   font-weight: 300;
+  outline: none;
 }
 
 textarea:hover {
@@ -1382,6 +1407,7 @@ input {
   transition: border 0.2s ease-in-out;
   font-size: 14px;
   display: inline-block;
+  outline: none;
 }
 
 input:hover {

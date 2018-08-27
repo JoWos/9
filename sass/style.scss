@@ -98,6 +98,15 @@ img {
     a {
         color: white;
     }
+
+    &:disabled {
+        background-color: $light-grey;
+
+        &:hover {
+            background-color: $light-grey;
+        }
+    }
+
 }
 
 .btn-orange {
@@ -123,12 +132,14 @@ img {
 
 table { 
     border-collapse: collapse;
-    min-width: 688px;
+    max-width: 686px;
+    width: 100%;
 
     tr {
         font-weight: bold;
         border-top: 2px solid $light-grey; 
         color: $header-color; 
+        
 
         td {
             padding: 22px 19px 26px 19px;
@@ -209,7 +220,7 @@ textarea {
     transition: border 0.2s ease-in-out;
     font-size: 14px;
     font-weight: 300;
-    
+    outline: none;
 
     &:hover {
         border: 1px solid $dark-grey;
@@ -236,6 +247,7 @@ input {
     transition: border 0.2s ease-in-out;
     font-size: 14px;
     display: inline-block;
+    outline: none;
 
     &:hover {
         border: 1px solid $dark-grey;
