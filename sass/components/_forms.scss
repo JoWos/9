@@ -5,17 +5,17 @@ textarea {
     border-radius: 3px;
     border: 1px solid $light-grey;
     padding: 10px;
-    transition: border 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     font-size: 14px;
     font-weight: 300;
     outline: none;
 
     &:hover {
-        border: 1px solid $dark-grey;
+        border-color: $dark-grey;
     }
 
     &:focus {
-        outline-color: $darkest-grey;  
+        border-color: $darkest-grey; 
     }
 
     &::placeholder {
@@ -27,17 +27,16 @@ textarea {
 input {
     max-width: 156px;
     width: 100%;
-    height: 40px;
+    padding: 10px;
     border-radius: 3px;
     border: 1px solid $light-grey;
-    padding: 0 10px;
     transition: border 0.2s ease-in-out;
     font-size: 14px;
     display: inline-block;
     outline: none;
 
     &:hover {
-        border: 1px solid $dark-grey;
+        border-color: $dark-grey;
         
         &::placeholder {
             color: $dark-grey;
@@ -45,7 +44,7 @@ input {
     }
 
     &:focus {
-        outline-color: $darkest-grey;  
+        border-color: $darkest-grey;  
     }
 
     &::placeholder {
@@ -62,9 +61,12 @@ input {
     font-size: 14px;
     width: 156px;
     transition: all 0.2s ease-in-out;
+    position: relative;
     
+
     input {
         border: none;
+        padding-left: 30px;
 
         &:focus {
             outline: none;   
@@ -72,6 +74,9 @@ input {
     }
     
     i {
+        position: absolute;
+        left: 0;
+        top: 10px;
         color: $light-grey;  
         padding: 0 5px;
     }
