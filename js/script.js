@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //MODALS
 
-var showModal = function(event){
+var showModal = function(event) {
 	event.preventDefault();		
 	var modals = document.querySelectorAll('.modal');
 		 
@@ -45,19 +45,19 @@ var showModal = function(event){
 
 //przypisanie funkcji otwierającej do guzików
 var modalLinks = document.querySelectorAll('.show-modal');
-for(var i = 0; i < modalLinks.length; i++){
+for(var i = 0; i < modalLinks.length; i++) {
 	modalLinks[i].addEventListener('click', showModal);
 }
 	
 //ZAMYKANIE MODALA
-var hideModal = function(event){
+var hideModal = function(event) {
 	event.preventDefault();
 	document.querySelector('#modal-overlay').classList.remove('show');
 };
 
 //przypisanie funkcji zamykającej do guzików
 var closeButtons = document.querySelectorAll('.modal .close');
-for(var i = 0; i < closeButtons.length; i++){
+for(var i = 0; i < closeButtons.length; i++) {
 	closeButtons[i].addEventListener('click', hideModal);
 }
 
@@ -66,8 +66,8 @@ document.querySelector('#modal-overlay').addEventListener('click', hideModal);
 //uniemożliwienie zamykania modala poprzez kliknięcie w samego modala
 var modals = document.querySelectorAll('.modal');
 
-for(var i = 0; i < modals.length; i++){
-	modals[i].addEventListener('click', function(event){
+for(var i = 0; i < modals.length; i++) {
+	modals[i].addEventListener('click', function(event) {
 		event.stopPropagation();
 	});
 }
